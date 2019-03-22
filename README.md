@@ -9,7 +9,7 @@ CMAKE VERSION **3.13** is **REQUIRED**!!!
 $ cmake .
 $ make
 ```
-## Use
+## Usage
 Just use command line and move your fingers.
 + **Create a index** 
 ``` bash
