@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="mojave"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\stemmer\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mojaveStorage">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/libmojaveStorage.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 mojaveStorage"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mojaveStorage/fast">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/libmojaveStorage.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 mojaveStorage/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mojave">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/mojave" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 mojave"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="mojave/fast">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/mojave" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 mojave/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memIndex">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/libmemIndex.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 memIndex"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="memIndex/fast">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/libmemIndex.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 memIndex/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stembundle">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/libstembundle.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 stembundle"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="stembundle/fast">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/libstembundle.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 stembundle/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="porter">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/stemmer/libporter.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave/stemmer"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 porter"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="porter/fast">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/stemmer/libporter.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave/stemmer"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 porter/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hash">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/stemmer/libhash.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave/stemmer"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 hash"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="hash/fast">
+				<Option output="/home/hanabi/workbench/project-2019/mojave/stemmer/libhash.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/hanabi/workbench/project-2019/mojave/stemmer"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 hash/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/hanabi/workbench/project-2019/mojave/stemmer/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/StemBundle.cc">
+			<Option target="stembundle"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/StemBundle.hpp">
+			<Option target="stembundle"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/memIndex.cc">
+			<Option target="memIndex"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/memIndex.hpp">
+			<Option target="memIndex"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/mojave.cc">
+			<Option target="mojave"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/mojaveStorage.cc">
+			<Option target="mojaveStorage"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/mojaveStorage.hpp">
+			<Option target="mojaveStorage"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/hash.c">
+			<Option target="hash"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/hash.h">
+			<Option target="hash"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/porter.c">
+			<Option target="porter"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/porter.h">
+			<Option target="porter"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/api.o">
+			<Option target="porter"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/utilities.o">
+			<Option target="porter"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\stemmer\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
