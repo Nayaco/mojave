@@ -14,5 +14,3 @@ Makefile
 *.Test
 mojave
 Eng.sw
-!api.o
-!utilities.o
