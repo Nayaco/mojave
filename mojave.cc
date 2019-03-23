@@ -2,6 +2,7 @@
 #include <tuple>
 #include <cstdio>
 #include <string>
+#include <vector>
 #include <cstring>
 #include <fstream>
 #include <chrono>
@@ -18,10 +19,11 @@ struct mojave: args::group<mojave>
 
 struct create: mojave::command<create>
 {
-    std::string input;
+    std::vector<std::string> input;
     std::string output;
     std::string swl;
-    create(): swl(std::string("")), output(std::string("")){}
+    uint32_t quiet;
+    create(): swl(std::string("")), output(std::string("")), quiet(0){}
     static const char* help() {
         return ":create a mojave index";
     }
@@ -32,6 +34,7 @@ struct create: mojave::command<create>
         f(input, "--input", "-I", args::help("Input file of the index."), args::required());
         f(output, "--output", "-O", args::help("Output file of the index."));
         f(swl, "--stopword", "-S", args::help("Stopword file of the index."));
+        f(quiet, "--quiet", "-Q", args::help("Quiet mode."));
     }
 
     void run() {
@@ -39,21 +42,26 @@ struct create: mojave::command<create>
         milliseconds ms0 = duration_cast< milliseconds >(
                 system_clock::now().time_since_epoch()
         );
-        std::ifstream file(input.c_str());
-        std::string str, file_contents, str0;
-        while (std::getline(file, str)) {
-            file_contents += str;
-            file_contents.push_back('\n');
-        }
         StemBundle bundle;
+        std::string str, file_contents, str0;
+
         if(swl.length() != 0) {
             std::ifstream filestop("Eng.swl");
             while (std::getline(filestop, str0)) {
                 bundle.AddStop(str0.c_str(), str0.length());
             }
         }
-        bundle.Stem(file_contents.c_str());
         if(output.length() == 0){
+            for(auto filename: input) {
+                std::ifstream file(filename.c_str());
+                file_contents.clear();
+                while (std::getline(file, str)) {
+                    file_contents += str;
+                    file_contents.push_back('\n');
+                }
+                bundle.Stem(file_contents.c_str());
+            }
+
             mojaveStorage store;
             for(auto i = bundle.begin(); !i.end(); i++) {
                 uint32_t count;
@@ -61,10 +69,20 @@ struct create: mojave::command<create>
                 char *str;
                 WordIndexList *list;
                 std::tie(hval, str, count, list) = i.get();
-                printf("%llx | %20s | %8d | %8d\n", hval, str, count, strlen(str));
+                if(!quiet)printf("%llx | %20s | %8d | %8d\n", hval, str, count, strlen(str));
                 store.insert(hval, *list);
             }
         } else {
+            for(auto filename: input) {
+                std::ifstream file(filename.c_str());
+                file_contents.clear();
+                while (std::getline(file, str)) {
+                    file_contents += str;
+                    file_contents.push_back('\n');
+                }
+                bundle.Stem(file_contents.c_str());
+            }
+
             mojaveStorage store(output.c_str());
             for(auto i = bundle.begin(); !i.end(); i++) {
                 uint32_t count;
@@ -72,7 +90,7 @@ struct create: mojave::command<create>
                 char *str;
                 WordIndexList *list;
                 std::tie(hval, str, count, list) = i.get();
-                printf("%llx | %20s | %8d | %8d\n", hval, str, count, strlen(str));
+                if(!quiet)printf("%llx | %20s | %8d | %8d\n", hval, str, count, strlen(str));
                 store.insert(hval, *list);
             }
         }

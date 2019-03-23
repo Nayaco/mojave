@@ -1,8 +1,9 @@
 ADD_LIBRARY(porter STATIC
         porter.h
         porter.c
-        runtime/utilities.o
-        runtime/api.o)
+        runtime/utilities.c
+        runtime/api.c)
+
 ADD_LIBRARY(hash STATIC
         hash.h
         hash.c)

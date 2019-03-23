@@ -40,7 +40,7 @@ mojaveStorage::mojaveStorage(uint32_t temp): size(0), usize(0), temp(temp) {
     }
     M_Index.clear();
 }
-mojaveStorage::mojaveStorage(const char *iName): size(0), usize(0) {
+mojaveStorage::mojaveStorage(const char *iName): size(0), usize(0), temp(0) {
     indexName = new char[strlen(iName) + 1];
     strcpy(indexName, iName);
     M_Index.clear();
@@ -98,9 +98,7 @@ mojaveStorage::~mojaveStorage() {
         if (munmap(storager.addr, (size_t) len) != 0) exit(3);
         truncate(indexName, len);
         storager.addr = nullptr;
-
         close(storager.fd);
-
         delete indexName;
     }
 }
@@ -258,4 +256,5 @@ uint32_t mojaveStorage::display() {
         }
         printf("\n");
     }
+    return 0;
 }

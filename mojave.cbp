@@ -239,10 +239,13 @@
 		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/porter.h">
 			<Option target="porter"/>
 		</Unit>
-		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/api.o">
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/api.c">
 			<Option target="porter"/>
 		</Unit>
-		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/utilities.o">
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/api.h">
+			<Option target="porter"/>
+		</Unit>
+		<Unit filename="/home/hanabi/workbench/project-2019/mojave/stemmer/runtime/utilities.c">
 			<Option target="porter"/>
 		</Unit>
 		<Unit filename="/home/hanabi/workbench/project-2019/mojave/CMakeLists.txt">
