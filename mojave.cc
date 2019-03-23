@@ -144,7 +144,8 @@ struct watch: mojave::command<watch>
         std::istream *inStream = &std::cin;
         if(input.length() != 0)
             inStream = new std::ifstream(input);
-
+        else
+            printf("The query will end with \\q\n");
         milliseconds ms0 = duration_cast< milliseconds >(
                 system_clock::now().time_since_epoch()
         );
