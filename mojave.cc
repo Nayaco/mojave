@@ -121,6 +121,70 @@ struct find: mojave::command<find>
     }
 };
 
+struct watch: mojave::command<watch>
+{
+    std::string filename;
+    std::string input;
+    watch() : input(std::string("")){}
+    static const char* help() {
+        return ":persistent search from a mojave index";
+    }
+
+    template<class F>
+    void parse(F f)
+    {
+        f(filename, "--input", "-I", args::help("Input file of the index."), args::required());
+        f(input, "--flle", "-F", args::help("Input standard input file for searching"));
+    }
+
+    void run() {
+        using namespace std::chrono;
+        uint32_t count = 0;
+        std::string str;
+        std::istream *inStream = &std::cin;
+        if(input.length() != 0)
+            inStream = new std::ifstream(input);
+
+        milliseconds ms0 = duration_cast< milliseconds >(
+                system_clock::now().time_since_epoch()
+        );
+        mojaveStorage store(1);
+        store.sync(filename.c_str(), SYNC_TO_MEM);
+        milliseconds ms1 = duration_cast< milliseconds >(
+                system_clock::now().time_since_epoch()
+        );
+        printf("INDEX SYNCED IN %llu Ms\n", ms1.count() - ms0.count());
+
+        milliseconds ms2 = duration_cast< milliseconds >(
+                system_clock::now().time_since_epoch()
+        );
+        while(std::getline(*inStream, str)) {
+            if(str == "\\q")break;
+            count++;
+            milliseconds msx = duration_cast< milliseconds >(
+                    system_clock::now().time_since_epoch()
+            );
+            bool finded;
+            IndexList *list1;
+            std::tie(finded, list1) = store.find(str.c_str(), str.length());
+            for (auto i: *list1) {
+                uint32_t doc = i >> 32;
+                uint32_t pos = i & 0x00000000FFFFFFFF;
+                printf("|%4d %4d|\n", doc, pos);
+            }
+            milliseconds msy = duration_cast< milliseconds >(
+                    system_clock::now().time_since_epoch()
+            );
+            printf("QUERY %09d FINISHED IN %llu Ms\n", count, msy.count() - msx.count());
+        }
+        milliseconds ms3 = duration_cast< milliseconds >(
+                system_clock::now().time_since_epoch()
+        );
+        printf("ALL QUERY FINISHED IN %llu Ms\n", ms3.count() - ms2.count());
+    }
+};
+
+
 int main(int argc, char const *argv[]) {
     args::parse<mojave>(argc, argv);
     return 0;
