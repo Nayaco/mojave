@@ -1,3 +1,14 @@
+/**
+ *  The algorithm of this search engine is quite easy
+ *  for DJBX33A is A quite useful hash algorithm
+ *  the hash collision is consider in an acceptable range
+ *  the TIME31 is also used to handle the collision
+ *  when the collision occurs, it will make sure the time33 and time31 value
+ *  are distinct, as expected the rate of collision will smaller
+ *  than 1 in billion
+ *  it store the absolute position of the word in a document
+ *  when using it, just maintain your own table of document
+ */
 #include <iostream>
 #include <tuple>
 #include <cstdio>
@@ -10,13 +21,12 @@
 #include "mojaveStorage.hpp"
 #include "args/args.hpp"
 
-struct mojave: args::group<mojave>
+struct mojave: args::group<mojave> /// cli tool
 {
     static const char* help() {
         return ":mojave-cli to manage the inverted index";
     }
 };
-
 struct create: mojave::command<create>
 {
     std::vector<std::string> input;
@@ -205,6 +215,14 @@ struct watch: mojave::command<watch>
 
 
 int main(int argc, char const *argv[]) {
+    using namespace std::chrono;
+    milliseconds ms0 = duration_cast< milliseconds >(
+            system_clock::now().time_since_epoch()
+    );
     args::parse<mojave>(argc, argv);
+    milliseconds ms1 = duration_cast< milliseconds >(
+            system_clock::now().time_since_epoch()
+    );
+    printf("ALL ASSIGNMENT FINISHED IN %llu Ms\n", ms1.count() - ms0.count());
     return 0;
 }

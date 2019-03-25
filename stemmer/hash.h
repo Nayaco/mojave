@@ -14,36 +14,37 @@ extern "C"{
 #endif
 
 
-/*
+/**
 * use alternative hash method
 * @params (Src:string, len:Int32, method:Int32)
 * @return Hash:Uint32
 */
 Uint32 Hash(const unsigned char *Src, Int32 method, Uint32 len);
 
-/*
-* time17 hash, it should be use if you want (not recommanded)
+/**
+* time17 hash, it should be use if you want
 * @params (Src:string, len:Int32)
 * @return Hash:Uint32
 */
 Uint32 TIME17H(unsigned char *Src, Int32 len);
 
-/*
-* time31 hash, it should be use if you want (not recommanded)
+/**
+* time31 hash, it should be use if you want
 * @params (Src:string, len:Int32)
 * @return Hash:Uint32
 */
 Uint32 TIME31H(unsigned char *Src, Int32 len);
 
-/*
+/**
 * time33 hash, it should be use at lower case string (recommanded)
+* PHP use this as its hash function
 * @params (Src:string, len:Int32)
 * @return Hash:Uint32
 */
 Uint32 DJBX33A(unsigned char *Src, Int32 len);
 
-/*
-* time65 hash, it should be use at the mix string
+/**
+* time65 hash, it should be use at the mix string (careful)
 * @params (Src:string, len:Int32)
 * @return Hash:Uint32
 */

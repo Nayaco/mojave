@@ -4,7 +4,8 @@
 ---
 
 ## Build
-CMAKE VERSION **3.13** is **REQUIRED**!!!
++ CMAKE VERSION **3.13** is **REQUIRED**
++ Unix/Liux is required, Windows is not supported 
 ``` bash
 $ cmake .
 $ make
@@ -13,7 +14,7 @@ $ make
 Just use command line and move your fingers.
 + **Create a index** 
 ``` bash
-$ ./mojave create [-I filename] [-S stopword-file] [-O outputfile](optional) 
+$ ./mojave create [-I filename...] [-S stopword-file] [-O outputfile](optional) [-Q1](optional)
 ```
 + **Search a string from a index** 
 ``` bash
@@ -34,9 +35,7 @@ jinja
 hanas
 \q
 ```
-
 ---
-Fxxk Copyright, This is **GNU**.
 
 
 

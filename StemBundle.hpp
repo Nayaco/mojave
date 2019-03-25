@@ -8,6 +8,7 @@
 #include <tuple>
 #include <map>
 
+/// word list and the Stem environment
 typedef std::vector<uint64_t> WordIndexList;
 struct stemPod
 {
@@ -16,6 +17,7 @@ struct stemPod
     WordIndexList index;
 };
 
+/// the hash for stopwords
 struct stopPod
 {
     uint64_t hash;
@@ -34,8 +36,6 @@ private:
     uint32_t stopSize;
     memIndex index;
 
-
-
     /// return true if in stopwordlist
     bool stopFilter(const char *str, uint32_t len);
 public:
@@ -49,11 +49,12 @@ public:
     ///return size
     uint32_t Size();
 
+    /// add stopword list
     virtual void AddStop(const char *str, uint32_t len);
-
+    /// Main method
     virtual uint32_t Stem(const char *str);
 
-    /// iterator
+    /// iterator in C++
     class iterator {
     private:
         std::map<uint64_t, stemPod>::iterator iter, endPoint;

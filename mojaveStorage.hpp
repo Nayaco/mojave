@@ -1,3 +1,12 @@
+/**
+ * WARNING
+ * there's one thing should be clear that
+ * Windows could never run this application
+ * cauz it use a POSIX-compliant Unix system call
+ * IT WILL NEVER WORK
+ * SAVE YOUR TIME don't even try to compile thie on a NT system
+*/
+
 #ifndef MOJAVE_MOJAVESTORAGE
 #define MOJAVE_MOJAVESTORAGE 1
 
@@ -83,18 +92,27 @@ private:
     /// size of the indexlist
     uint32_t size;
     uint32_t usize;
+
+    /// the Hash map using TIME33 and TIME31
     std::map<uint64_t, M_node> M_Index;
     uint32_t temp;
 public:
     mojaveStorage();
     mojaveStorage(uint32_t temp);
     explicit mojaveStorage(const char *iName);
+
+    /// the destruction contains the storage process
+    /// when it goes out of the domain, it will store auto matically
     ~mojaveStorage();
+
+    /// insert and search from the inverted index
     void insert(uint64_t hVal, uint64_t docPos);
     void insert(uint64_t hVal, IndexList &docPoslist);
     std::tuple<bool, IndexList*> find(const char* str, uint32_t len);
+
+    /// this is for consistence storage and sync from the memory
     uint32_t sync(const char *iName, uint32_t mode);
-    uint32_t display();
+    uint32_t display(); //test
 };
 
 
